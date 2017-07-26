@@ -25,8 +25,9 @@
         <a-animation attribute="rotation"
                dur="12000"
                easing="linear"
-               begin="0"                                                        
-               fill="forwards"
+               begin="mouseenter"        
+               end="mouseleave"
+               fill="backwards"
                to="0 360 0"
                repeat="indefinite"></a-animation>
       </a-sphere>
@@ -34,19 +35,22 @@
         <a-animation attribute="rotation"
                dur="12000"
                easing="linear"
-               begin="0"                                                        
-               fill="forwards"
+               begin="mouseenter"        
+               end="mouseleave"
+               fill="b"
                to="0 360 0"
                repeat="indefinite"></a-animation>
-      </a-sphere>
+     </a-sphere>
      <a-sphere geometry="segmentsHeight: 100; segmentsWidth: 100" position="-2 .3 -1" radius="1" src="#3">
       <a-animation attribute="rotation"
                dur="12000"
                easing="linear"
-               begin="0"                                                        
-               fill="forwards"
+               begin="mouseenter"        
+               end="mouseleave"
+               fill="none"
                to="0 360 0"
-               repeat="indefinite"></a-animation></a-sphere>
+               repeat="indefinite"></a-animation>
+     </a-sphere>
       <a-sky></a-sky>
     </a-scene>
   </body>
