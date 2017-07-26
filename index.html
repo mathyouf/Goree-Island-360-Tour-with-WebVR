@@ -2,8 +2,9 @@
 <html>
   <head>
     <title>Hello, WebVR! - A-Frame</title>
-    <meta name="description" content="Hello, WebVR! - A-Frame">
+    <meta name="description" content="Component Entity & Advancedxposure">
     <script src="https://aframe.io/releases/0.6.0/aframe.min.js"></script>
+    <!-- If you're reading this and interested in VR Development, message me at 11fishem@gmail.com -->
   </head>
   <body>
     <a-scene>
@@ -11,6 +12,7 @@
       <img id="1" src="https://cdn.glitch.com/06a9db44-d744-4414-8fd7-1d113a4f66b0%2FSAM_100_0661.jpg?1501101362305"/>
       <img id="2" src="https://cdn.glitch.com/06a9db44-d744-4414-8fd7-1d113a4f66b0%2FSAM_100_0656.jpg?1501101363033"/>
       <img id="3" src="https://cdn.glitch.com/06a9db44-d744-4414-8fd7-1d113a4f66b0%2FSAM_100_0667.jpg?1501101363338"/>
+      <img id="4" src="https://cdn.glitch.com/06a9db44-d744-4414-8fd7-1d113a4f66b0%2Fce.jpg?1501104660695"/>
       </a-assets>
      <a-entity camera look-controls rotation="0 0 0">
           <a-cursor scale="1.4 1.4 0"
@@ -19,7 +21,7 @@
                 color="black"
                 fuse="true"
                 opacity="0.6"
-                fuseTimeout="500">
+                fuseTimeout="800">
       </a-cursor></a-entity>
       <a-sphere geometry="segmentsHeight: 100; segmentsWidth: 100" position="2 .3 -1"  radius="1" src="#1" onclick="setSky(this);">
         <a-animation attribute="rotation"
@@ -31,7 +33,7 @@
                to="0 360 0"
                repeat="indefinite"></a-animation>
       </a-sphere>
-      <a-sphere geometry="segmentsHeight: 100; segmentsWidth: 100" position="0 .3 -2" radius="1" src="#2" onclick="setSky(this);">
+      <a-sphere geometry="segmentsHeight: 100; segmentsWidth: 100" position="0 .3 2" radius="1" src="#2" onclick="setSky(this);">
         <a-animation attribute="rotation"
                dur="12000"
                easing="linear"
@@ -52,6 +54,7 @@
                to="0 360 0"
                repeat="indefinite"></a-animation>
      </a-sphere>
+    <a-circle radius="1" position="0 .4 -2" src="#4"></a-circle>
       <a-sky id="skyimg" src=""></a-sky>
     </a-scene>
     <script>
