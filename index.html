@@ -7,11 +7,15 @@
   </head>
   <body>
     <a-scene>
-      <a-box position="-1 0.5 -3" rotation="0 45 0" color="#4CC3D9"></a-box>
-      <a-sphere position="0 1.25 -5" radius="1.25" color="#EF2D5E"></a-sphere>
-      <a-cylinder position="1 0.75 -3" radius="0.5" height="1.5" color="#FFC65D"></a-cylinder>
-      <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane>
-      <a-sky color="#ECECEC"></a-sky>
+      <a-assets>
+      <img id="1" src="https://cdn.glitch.com/06a9db44-d744-4414-8fd7-1d113a4f66b0%2FSAM_100_0661.jpg?1501101362305"/>
+      <img id="2" src="https://cdn.glitch.com/06a9db44-d744-4414-8fd7-1d113a4f66b0%2FSAM_100_0656.jpg?1501101363033"/>
+      <img id="3" src="https://cdn.glitch.com/06a9db44-d744-4414-8fd7-1d113a4f66b0%2FSAM_100_0667.jpg?1501101363338"/>
+      </a-assets>
+      <a-sphere position="2 1.2 2"  radius="1" src="#1"></a-sphere>
+      <a-sphere position="2 1.2 -2" radius="1" src="#2"></a-sphere>
+      <a-sphere position="-2 1.2 2" radius="1" src="#3"></a-sphere>
+      <a-sky></a-sky>
     </a-scene>
   </body>
 </html>
