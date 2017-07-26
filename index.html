@@ -21,37 +21,44 @@
                 opacity="0.6"
                 fuseTimeout="500">
       </a-cursor></a-entity>
-      <a-sphere geometry="segmentsHeight: 100; segmentsWidth: 100" position="2 .3 -1"  radius="1" src="#1">
+      <a-sphere geometry="segmentsHeight: 100; segmentsWidth: 100" position="2 .3 -1"  radius="1" src="#1" onclick="setSky(this);">
         <a-animation attribute="rotation"
                dur="12000"
                easing="linear"
                begin="mouseenter"        
                end="mouseleave"
-               fill="backwards"
+               fill="both"
                to="0 360 0"
                repeat="indefinite"></a-animation>
       </a-sphere>
-      <a-sphere geometry="segmentsHeight: 100; segmentsWidth: 100" position="0 .3 -2" radius="1" src="#2">
+      <a-sphere geometry="segmentsHeight: 100; segmentsWidth: 100" position="0 .3 -2" radius="1" src="#2" onclick="setSky(this);">
         <a-animation attribute="rotation"
                dur="12000"
                easing="linear"
                begin="mouseenter"        
                end="mouseleave"
-               fill="b"
+               fill="both"
                to="0 360 0"
                repeat="indefinite"></a-animation>
      </a-sphere>
-     <a-sphere geometry="segmentsHeight: 100; segmentsWidth: 100" position="-2 .3 -1" radius="1" src="#3">
+     <a-sphere geometry="segmentsHeight: 100; segmentsWidth: 100" position="-2 .3 -1" radius="1" src="#3" onclick="setSky(this);">
       <a-animation attribute="rotation"
                dur="12000"
                easing="linear"
                begin="mouseenter"        
                end="mouseleave"
-               fill="none"
+               fill="both"
+               from
                to="0 360 0"
                repeat="indefinite"></a-animation>
      </a-sphere>
-      <a-sky></a-sky>
+      <a-sky id="skyimg" src=""></a-sky>
     </a-scene>
+    <script>
+    function setSky(e){
+      var sky = e.getAttribute('src');
+      document.getElementById('skyimg').setAttribute('src', sky)
+    }
+    </script>
   </body>
 </html>
