@@ -12,9 +12,18 @@
       <img id="2" src="https://cdn.glitch.com/06a9db44-d744-4414-8fd7-1d113a4f66b0%2FSAM_100_0656.jpg?1501101363033"/>
       <img id="3" src="https://cdn.glitch.com/06a9db44-d744-4414-8fd7-1d113a4f66b0%2FSAM_100_0667.jpg?1501101363338"/>
       </a-assets>
-      <a-sphere position="2 1.2 2"  radius="1" src="#1"></a-sphere>
-      <a-sphere position="2 1.2 -2" radius="1" src="#2"></a-sphere>
-      <a-sphere position="-2 1.2 2" radius="1" src="#3"></a-sphere>
+     <a-entity camera look-controls rotation="0 0 0">
+          <a-cursor scale="1.4 1.4 0"
+                cursor-feedback
+                position= "0 0 -.5"
+                color="black"
+                fuse="true"
+                opacity="0.6"
+                fuseTimeout="500">
+      </a-cursor></a-entity>
+      <a-sphere geometry="segmentsHeight: 100; segmentsWidth: 100" position="2 .3 -1"  radius="1" src="#1" ></a-sphere>
+      <a-sphere geometry="segmentsHeight: 100; segmentsWidth: 100" position="0 .3 -2" radius="1" src="#2"></a-sphere>
+      <a-sphere geometry="segmentsHeight: 100; segmentsWidth: 100" position="-2 .3 -1" radius="1" src="#3"></a-sphere>
       <a-sky></a-sky>
     </a-scene>
   </body>
