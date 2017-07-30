@@ -29,9 +29,9 @@
                 opacity="0.6"
                 fuseTimeout="800">
       </a-cursor></a-entity>
-      <a-circle id="celogo" radius="1" position="0 .4 -2" src="#4" mouseenter="menu();"></a-circle>
-      <a-circle id="cbuslogo" radius="1" position="0 .4 -2.1" src="#9" onclick="showcbus();"></a-circle>
-      <a-circle id="osulogo" radius="1" position="0 .4 -2.1" src="#10" onclick="showosu();"></a-circle>
+      <a-circle id="celogo" radius="1" position="0 .4 -2" src="#4" mouseenter="menuopen();"></a-circle>
+      <a-circle id="cbuslogo" radius="1" position="0 .4 -2.1" src="#9" onclick="showcbus();menuclose();"></a-circle>
+      <a-circle id="osulogo" radius="1" position="0 .4 -2.1" src="#10" onclick="showosu();menuclose();"></a-circle>
       <a-sky id="skyimg" src="" radius="100"></a-sky>
       <a-entity id="osu">
         <a-sphere geometry="segmentsHeight: 100; segmentsWidth: 100" position="2 .3 -1"  radius=".8" src="#5" onclick="setSky(this);">
@@ -129,9 +129,13 @@
       hideAll();
       document.getElementById('cbus').setAttribute('visible',true);
     }
-    function menu(){
+    function menuopen(){
       document.getElementById('cbuslogo').setAttribute('position', '-1 .4 -2.1' )
       document.getElementById('osulogo').setAttribute('position', '1 .4 -2.1' )
+    }
+    function menuclose(){
+      document.getElementById('cbuslogo').setAttribute('position', '0 .4 -2.1' )
+      document.getElementById('osulogo').setAttribute('position', '0 .4 -2.1' )
     }
     </script>
   </body>
