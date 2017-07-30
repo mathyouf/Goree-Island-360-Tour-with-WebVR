@@ -17,6 +17,8 @@
       <img id="6" preload="auto" src="https://cdn.glitch.com/06a9db44-d744-4414-8fd7-1d113a4f66b0%2FSAM_100_0686.jpg?1501428186415"/>
       <img id="7" preload="auto" src="https://cdn.glitch.com/06a9db44-d744-4414-8fd7-1d113a4f66b0%2FSAM_100_0689.jpg?1501428241911"/>
       <img id="8" preload="auto" src="https://cdn.glitch.com/06a9db44-d744-4414-8fd7-1d113a4f66b0%2FSAM_100_0692.jpg?1501428246481"/>
+      <img id="9" preload="auto" src="https://cdn.glitch.com/06a9db44-d744-4414-8fd7-1d113a4f66b0%2Fcolumbus_mayor_large.jpg?1501428641880"/>
+      <img id="10" preload="auto" src="https://cdn.glitch.com/06a9db44-d744-4414-8fd7-1d113a4f66b0%2FApparel.ec1fd00c.png?1501429033676"/>
       </a-assets>
      <a-entity camera look-controls rotation="0 0 0">
           <a-cursor scale="1.4 1.4 0"
@@ -27,7 +29,9 @@
                 opacity="0.6"
                 fuseTimeout="800">
       </a-cursor></a-entity>
-      <a-circle radius="1" position="0 .4 -2" src="#4"></a-circle>
+      <a-circle id="celogo" radius="1" position="0 .4 -2" src="#4" mouseenter="menu();"></a-circle>
+      <a-circle id="cbuslogo" radius="1" position="0 .4 -2.1" src="#9" onclick="showcbus();"></a-circle>
+      <a-circle id="osulogo" radius="1" position="0 .4 -2.1" src="#10" onclick="showosu();"></a-circle>
       <a-sky id="skyimg" src="" radius="100"></a-sky>
       <a-entity id="osu">
         <a-sphere geometry="segmentsHeight: 100; segmentsWidth: 100" position="2 .3 -1"  radius=".8" src="#5" onclick="setSky(this);">
@@ -113,7 +117,21 @@
       document.getElementById('skyimg').setAttribute('src', sky)
     }
     function hideAll(){
-      document.querySelector
+      document.getElementById('ose').setAttribute('visible',false);
+      document.getElementById('cbus').setAttribute('visible',false)
+    }
+      
+    function showosu (){
+      hideAll();
+      document.getElementById('osu').setAttribute('visible',true);
+    }
+    function showcbus (){
+      hideAll();
+      document.getElementById('cbus').setAttribute('visible',true);
+    }
+    function menu(){
+      document.getElementById('cbuslogo').setAttribute('position', '-1 .4 -2.1' )
+      document.getElementById('osulogo').setAttribute('position', '1 .4 -2.1' )
     }
     </script>
   </body>
