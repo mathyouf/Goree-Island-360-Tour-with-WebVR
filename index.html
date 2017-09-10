@@ -4,7 +4,7 @@
     <title>Component Entity & Advanced Xposure</title>
     <meta name="description" content="Component Entity & Advancedxposure">
     <script src="https://aframe.io/releases/0.6.0/aframe.min.js"></script>
-      <script src="https://unpkg.com/aframe-layout-component@4.1.1/dist/aframe-layout-component.min.js"></script>
+      <script src="https://cdn.rawgit.com/ngokevin/kframe/master/components/layout/dist/aframe-layout-component.min.js"></script>
     <!-- If you're reading this and interested in VR Development, message me at 11fishem@gmail.com -->
   </head>
   <body>
@@ -31,7 +31,7 @@
                 fuseTimeout="800">
       </a-cursor></a-entity>
       <a-sky id="skyimg" src="" radius="100"></a-sky>
-      <a-entity layout="type: dodecahedron; margin: 2" position="5 0 -5">
+      <a-entity layout="type: circle; angle: 45;radius: 3;plane:xz" position="0 -1.9 0">
         <a-sphere geometry="segmentsHeight: 100; segmentsWidth: 100"  radius=".8" src="#5" onclick="setSky(this);">
         <a-animation attribute="rotation"
                dur="12000"
