@@ -31,7 +31,7 @@
                 fuseTimeout="800">
       </a-cursor></a-entity>
       <a-sky id="skyimg" src="" radius="100"></a-sky>
-      <a-entity layout="type: circle; angle: 45;radius: 3;plane:xz" position="0 -1.9 0">
+      <a-entity id="allspheres" layout="type: circle; angle: 51;radius: 3;plane:xz" position="0 -1.9 0">
         <a-sphere geometry="segmentsHeight: 100; segmentsWidth: 100"  radius=".8" src="#5" onclick="setSky(this);">
         <a-animation attribute="rotation"
                dur="12000"
@@ -109,6 +109,7 @@
     </a-scene>
     <script>
     function setSky(e){
+      e.setAttribbute('opacity, 1')
       var sky = e.getAttribute('src');
       document.getElementById('skyimg').setAttribute('src', sky)
     }
