@@ -4,7 +4,9 @@
     <title>Component Entity & Advanced Xposure</title>
     <meta name="description" content="Component Entity & Advancedxposure">
     <script src="https://aframe.io/releases/0.6.1/aframe.min.js"></script>
-      <script src="https://cdn.rawgit.com/ngokevin/kframe/master/components/layout/dist/aframe-layout-component.min.js"></script>
+    <script src="https://cdn.rawgit.com/ngokevin/kframe/master/components/layout/dist/aframe-layout-component.min.js"></script>
+    <script src="https://cdn.rawgit.com/zcanter/aframe-gradient-sky/master/dist/gradientsky.min.js"></script>
+
     <!-- If you're reading this and interested in VR Development, message me at MatthewAFisher@componententity.com -->
   </head>
   <body>
@@ -22,15 +24,15 @@
       <img id="10" preload="auto" src="https://cdn.glitch.com/06a9db44-d744-4414-8fd7-1d113a4f66b0%2FApparel.ec1fd00c.png?1501429033676"/>
       </a-assets>
        <a-entity position="0 1.7 0" camera look-controls rotation="0 -100 0">
-        <a-entity cursor="fuse: true; fuseTimeout: 1000;" raycaster="far: 200; objects: .photos"></a-entity>
+        <a-entity cursor="fuse: true; fuseTimeout: 1000;" raycaster="far: 200; objects: .photos" position="0 0 -1" geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03" material="color: black; shader: flat"></a-entity>
       </a-entity>
       <a-sky id="skyimg" color="white" src="" radius="100"></a-sky>
+      <a-gradient-sky material="shader: gradient; topColor: 255 0 0; bottomColor: 0 121 255;"></a-gradient-sky>
       <a-cylinder src="#4" position="0 -2.697 0" rotation="0 -10 0" material="opacity:1;shader:flat" geometry="radius:2.7;segmentsRadial:60;height:0.1"></a-cylinder>
       <a-entity id="allspheres" layout="type: circle; angle: 51;radius: 3;plane:xz" position="0 -1.9 0">
        <!-- <a-animation attribute="position" dur="10000" begin="2000" easing="linear" from="0 2 0" to="0 -1.9 0" repeat="0"></a-animation>
         <a-animation attribute="rotation" dur="12000" easing="linear" from="0 360 0" to="0 0 0" repeat="0"></a-animation> -->
          <a-sphere class="photos" geometry="segmentsHeight: 100; segmentsWidth: 100" opacity=".7" radius=".8" src="#1" onclick="hideAll;setSky(this);">
-           <a-cylinder></a-cylinder>
             <a-animation attribute="rotation"
                    dur="12000"
                    easing="linear"
