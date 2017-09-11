@@ -21,12 +21,12 @@
       <img id="9" preload="auto" src="https://cdn.glitch.com/06a9db44-d744-4414-8fd7-1d113a4f66b0%2Fcolumbus_mayor_large.jpg?1501428641880"/>
       <img id="10" preload="auto" src="https://cdn.glitch.com/06a9db44-d744-4414-8fd7-1d113a4f66b0%2FApparel.ec1fd00c.png?1501429033676"/>
       </a-assets>
-       <a-entity position="0 1.7 0" camera look-controls rotation="0 0 0">
+       <a-entity position="0 1.7 0" camera look-controls rotation="0 -100 0">
         <a-entity cursor="rayOrigin: mouse;" raycaster="far: 200; objects: .photos"></a-entity>
       </a-entity>
       <a-sky id="skyimg" src="" radius="100"></a-sky>
-      <a-cylinder src="#4" position="0 -2.697 0" rotation="0 -10 0" material="opacity:0.95;shader:flat" geometry="radius:2.7;segmentsRadial:7;height:0.1"></a-cylinder>
-      <a-entity id="allspheres" layout="type: circle; angle: 51;radius: 3;plane:xz" position="0 -1.9 0">
+      <a-cylinder src="#4" position="0 -2.697 0" rotation="0 -10 0" material="opacity:1;shader:flat" geometry="radius:2.7;segmentsRadial:7;height:0.1"></a-cylinder>
+      <a-entity id="allspheres" layout="type: circle; angle: 51;radius: 3;plane:xz" position="0 -1.9 0"><a-animation attribute="position" dur="30000" easing="back" from="0 2 0" to="0 -1.9 0" repeat="0"></a-animation>
          <a-sphere class="photos" geometry="segmentsHeight: 100; segmentsWidth: 100" radius=".8" src="#1" onclick="hideAll();setSky(this);">
             <a-animation attribute="rotation"
                    dur="12000"
@@ -110,7 +110,7 @@
     };
     function hideAll(){
       var x=document.getElementsByClassName("photos");
-      x.attribute('opacity','.7');
+      x.setAttribute('opacity','0.7');
     };
     </script>
   </body>
