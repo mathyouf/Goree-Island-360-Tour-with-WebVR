@@ -27,9 +27,10 @@
       <a-sky id="skyimg" color="white" src="" radius="100"></a-sky>
       <a-cylinder src="#4" position="0 -2.697 0" rotation="0 -10 0" material="opacity:1;shader:flat" geometry="radius:2.7;segmentsRadial:60;height:0.1"></a-cylinder>
       <a-entity id="allspheres" layout="type: circle; angle: 51;radius: 3;plane:xz" position="0 -1.9 0">
-        <a-animation attribute="position" dur="10000" begin="2000" easing="linear" from="0 2 0" to="0 -1.9 0" repeat="0"></a-animation>
-        <a-animation attribute="rotation" dur="12000" easing="linear" from="0 360 0" to="0 0 0" repeat="0"></a-animation>
+       <!-- <a-animation attribute="position" dur="10000" begin="2000" easing="linear" from="0 2 0" to="0 -1.9 0" repeat="0"></a-animation>
+        <a-animation attribute="rotation" dur="12000" easing="linear" from="0 360 0" to="0 0 0" repeat="0"></a-animation> -->
          <a-sphere class="photos" geometry="segmentsHeight: 100; segmentsWidth: 100" opacity=".7" radius=".8" src="#1" onclick="hideAll;setSky(this);">
+           <a-cylinder></a-cylinder>
             <a-animation attribute="rotation"
                    dur="12000"
                    easing="linear"
