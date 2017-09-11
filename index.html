@@ -3,7 +3,7 @@
   <head>
     <title>Component Entity & Advanced Xposure</title>
     <meta name="description" content="Component Entity & Advancedxposure">
-    <script src="https://aframe.io/releases/0.6.0/aframe.min.js"></script>
+    <script src="https://aframe.io/releases/0.6.1/aframe.min.js"></script>
       <script src="https://cdn.rawgit.com/ngokevin/kframe/master/components/layout/dist/aframe-layout-component.min.js"></script>
     <!-- If you're reading this and interested in VR Development, message me at MatthewAFisher@componententity.com -->
   </head>
@@ -26,8 +26,8 @@
       </a-entity>
       <a-sky id="skyimg" src="" radius="100"></a-sky>
       <a-cylinder src="#4" position="0 -2.697 0" rotation="0 -10 0" material="opacity:1;shader:flat" geometry="radius:2.7;segmentsRadial:7;height:0.1"></a-cylinder>
-      <a-entity id="allspheres" layout="type: circle; angle: 51;radius: 3;plane:xz" position="0 -1.9 0"><a-animation attribute="position" dur="30000" easing="back" from="0 2 0" to="0 -1.9 0" repeat="0"></a-animation>
-         <a-sphere class="photos" geometry="segmentsHeight: 100; segmentsWidth: 100" radius=".8" src="#1" onclick="hideAll();setSky(this);">
+      <a-entity id="allspheres" layout="type: circle; angle: 51;radius: 3;plane:xz" position="0 -1.9 0"><a-animation attribute="position" dur="10000" easing="ease-in-quint" from="0 2 0" to="0 -1.9 0" repeat="0"></a-animation>
+         <a-sphere class="photos" geometry="segmentsHeight: 100; segmentsWidth: 100" opacity=".8" radius=".8" src="#1" onclick="hideAll;setSky(this);">
             <a-animation attribute="rotation"
                    dur="12000"
                    easing="linear"
@@ -37,7 +37,7 @@
                    to="0 360 0"
                    repeat="indefinite"></a-animation>
           </a-sphere>
-         <a-sphere class="photos" geometry="segmentsHeight: 100; segmentsWidth: 100" radius=".8" src="#2" onclick="hideAll;setSky(this);">
+         <a-sphere class="photos" geometry="segmentsHeight: 100; segmentsWidth: 100" opacity=".8" radius=".8" src="#2" onclick="hideAll;setSky(this);">
             <a-animation attribute="rotation"
                    dur="12000"
                    easing="linear"
@@ -47,7 +47,7 @@
                    to="0 360 0"
                    repeat="indefinite"></a-animation>
          </a-sphere>
-         <a-sphere class="photos" geometry="segmentsHeight: 100; segmentsWidth: 100" radius=".8" src="#3" onclick="hideAll;setSky(this);">
+         <a-sphere class="photos" geometry="segmentsHeight: 100; segmentsWidth: 100" opacity=".8" radius=".8" src="#3" onclick="hideAll;setSky(this);">
           <a-animation attribute="rotation"
                    dur="12000"
                    easing="linear"
@@ -58,7 +58,7 @@
                    to="0 360 0"
                    repeat="indefinite"></a-animation>
          </a-sphere>
-         <a-sphere class="photos" geometry="segmentsHeight: 100; segmentsWidth: 100" radius=".8" src="#5" onclick="hideAll;setSky(this);">
+         <a-sphere class="photos" geometry="segmentsHeight: 100; segmentsWidth: 100" opacity=".8" radius=".8" src="#5" onclick="hideAll;setSky(this);">
           <a-animation attribute="rotation"
                    dur="12000"
                    easing="linear"
@@ -69,7 +69,7 @@
                    to="0 360 0"
                    repeat="indefinite"></a-animation>
          </a-sphere>
-         <a-sphere class="photos" geometry="segmentsHeight: 100; segmentsWidth: 100" radius=".8" src="#6" onclick="hideAll;setSky(this);">
+         <a-sphere class="photos" geometry="segmentsHeight: 100; segmentsWidth: 100" opacity=".8" radius=".8" src="#6" onclick="hideAll;setSky(this);">
             <a-animation attribute="rotation"
                    dur="12000"
                    easing="linear"
@@ -79,7 +79,7 @@
                    to="0 360 0"
                    repeat="indefinite"></a-animation>
           </a-sphere>
-         <a-sphere class="photos" geometry="segmentsHeight: 100; segmentsWidth: 100" radius=".8" src="#7" onclick="hideAll;setSky(this);">
+         <a-sphere class="photos" geometry="segmentsHeight: 100; segmentsWidth: 100" opacity=".8" radius=".8" src="#7" onclick="hideAll;setSky(this);">
             <a-animation attribute="rotation"
                    dur="12000"
                    easing="linear"
@@ -89,7 +89,7 @@
                    to="0 360 0"
                    repeat="indefinite"></a-animation>
          </a-sphere>
-         <a-sphere class="photos" geometry="segmentsHeight: 100; segmentsWidth: 100" radius=".8" src="#8" onclick="hideAll;setSky(this);">
+         <a-sphere class="photos" geometry="segmentsHeight: 100; segmentsWidth: 100" opacity=".8" radius=".8" src="#8" onclick="hideAll;setSky(this);">
           <a-animation attribute="rotation"
                    dur="12000"
                    easing="linear"
@@ -104,7 +104,7 @@
     </a-scene>
     <script>
     function setSky(e){
-      e.setAttribute('opacity', '1');
+      e.setAttribute('opacity', 1);
       var sky = e.getAttribute('src');
       document.getElementById('skyimg').setAttribute('src', sky)
     };
