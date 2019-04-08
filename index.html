@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Component Entity & Advanced Xposure</title>
-    <meta name="description" content="Component Entity & Advancedxposure">
+    <title>Dakar Djibril</title>
+    <meta name="description" content="Dakar Djibril">
     <script src="https://aframe.io/releases/0.6.1/aframe.min.js"></script>
     <script src="https://cdn.rawgit.com/ngokevin/kframe/master/components/layout/dist/aframe-layout-component.min.js"></script>
     <script src="https://cdn.rawgit.com/zcanter/aframe-gradient-sky/master/dist/gradientsky.min.js"></script>
@@ -12,23 +12,22 @@
   <body>
     <a-scene o>
       <a-assets>
-       <img id="1" crossorigin="anonymous" preload="true" src="https://cdn.glitch.com/1b9699f8-73ad-489a-9e1b-3b3179e655b0%2FSAM_100_0341compressed.jpg?1508616930186"/>
-        <img id="2" crossorigin="anonymous" preload="true" src="https://cdn.glitch.com/1b9699f8-73ad-489a-9e1b-3b3179e655b0%2FSAM_100_0400compressed.jpg?1508616978733"/>
-        <img id="6" crossorigin="anonymous" preload="true" src="https://cdn.glitch.com/1b9699f8-73ad-489a-9e1b-3b3179e655b0%2FSAM_100_0408compressed.jpg?1508616979020"/>
-        <img id="3" crossorigin="anonymous" preload="true" src="https://cdn.glitch.com/1b9699f8-73ad-489a-9e1b-3b3179e655b0%2FSAM_100_0436compressed.jpg?1508617027221"/>
-        <img id="5" crossorigin="anonymous" preload="true" src="https://cdn.glitch.com/1b9699f8-73ad-489a-9e1b-3b3179e655b0%2FSAM_100_0413compressed.jpg?1508617027486"/>
+       <img id="1" crossorigin="anonymous" preload="true" src="https://cdn.glitch.com/7b12b550-1062-4f09-a123-5b05cdb4904c%2F360_0061_stitched_injected.JPG?1554743891482"/>
+        <img id="2" crossorigin="anonymous" preload="true" src="https://cdn.glitch.com/7b12b550-1062-4f09-a123-5b05cdb4904c%2F360_0082_stitched_injected.JPG?1554743898849"/>
+        <img id="6" crossorigin="anonymous" preload="true" src="https://cdn.glitch.com/7b12b550-1062-4f09-a123-5b05cdb4904c%2F360_0066_stitched_injected.JPG?1554743899299"/>
+        <img id="3" crossorigin="anonymous" preload="true" src="https://cdn.glitch.com/7b12b550-1062-4f09-a123-5b05cdb4904c%2F360_0100_stitched_injected.JPG?1554743900879"/>
+        <img id="5" crossorigin="anonymous" preload="true" src="https://cdn.glitch.com/7b12b550-1062-4f09-a123-5b05cdb4904c%2F360_0101_stitched_injected.JPG?1554743906275"/>
         <img id="4" crossorigin="anonymous" preload="true" src="https://cdn.glitch.com/1cd7e25b-88ed-43d6-bb86-3af6973d2a24%2FWP-Map-FINAL-REV.jpg?1512065799225"/>
-        <img id="7" crossorigin="anonymous" preload="true" src="https://cdn.glitch.com/1b9699f8-73ad-489a-9e1b-3b3179e655b0%2FSAM_100_0377compressed.jpg?1508617027606"/>
-        <img id="8" crossorigin="anonymous" preload="true" src="https://cdn.glitch.com/1b9699f8-73ad-489a-9e1b-3b3179e655b0%2FSAM_100_0364compressed.jpg?1508616943674"/>
-        <img id="9" crossorigin="anonymous" preload="true" src="https://cdn.glitch.com/1b9699f8-73ad-489a-9e1b-3b3179e655b0%2FSAM_100_0424compressed.jpg?1508616978730"/>
+        <img id="7" crossorigin="anonymous" preload="true" src="https://cdn.glitch.com/7b12b550-1062-4f09-a123-5b05cdb4904c%2F360_0102_stitched_injected.JPG?1554743916775"/>
+        <img id="8" crossorigin="anonymous" preload="true" src="https://cdn.glitch.com/7b12b550-1062-4f09-a123-5b05cdb4904c%2F360_0075_stitched_injected.JPG?1554743921878"/>
+        <img id="9" crossorigin="anonymous" preload="true" src="https://cdn.glitch.com/7b12b550-1062-4f09-a123-5b05cdb4904c%2F360_0077_stitched_injected.JPG?1554743921971"/>
       </a-assets>
        <a-entity position="0 1.7 0" camera look-controls rotation="0 -100 0">
         <a-entity cursor="fuse: true; fuseTimeout: 1000;" raycaster="far: 200; objects: .photos" position="0 0 -1" geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03" material="color: black; shader: flat"></a-entity>
       </a-entity>
-      <a-sky id="skyimg" color="white" src="" radius="100"></a-sky>
-      <a-gradient-sky id="gradientsky" material="topColor:0 0 0;offset:11;bottomColor:236 0 139" geometry="segmentsHeight:25;radius:99"></a-gradient-sky>
+      <a-sky id="skyimg" color="white" src="#5" radius="100"></a-sky>
       <a-cylinder src="#4" position="0 -2.697 0" rotation="0 -10 0" material="opacity:1;shader:flat" geometry="radius:2.7;segmentsRadial:60;height:0.1"></a-cylinder>
-      <a-entity id="allspheres" layout="type: circle; angle: 51;radius: 3;plane:xz" position="0 -1.9 0">
+      <a-entity id="allspheres" layout="type: circle; angle: 51;radius: 3;plane:xz" position="0 0 0">
        <!-- <a-animation attribute="position" dur="10000" begin="2000" easing="linear" from="0 2 0" to="0 -1.9 0" repeat="0"></a-animation>
         <a-animation attribute="rotation" dur="12000" easing="linear" from="0 360 0" to="0 0 0" repeat="0"></a-animation> -->
          <a-sphere class="photos" geometry="segmentsHeight: 100; segmentsWidth: 100" opacity=".7" radius=".8" src="#1" onclick="hideAll;setSky(this);">
@@ -108,7 +107,6 @@
     </a-scene>
     <script>
     function setSky(e){
-      document.getElementById('gradientsky').setAttribute('geometry','radius','101');
       e.setAttribute('opacity', 1);
       var sky = e.getAttribute('src');
       document.getElementById('skyimg').setAttribute('src', sky)
